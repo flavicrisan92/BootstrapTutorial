@@ -15,40 +15,77 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <ul class="list-group">
-                    <li class="list-group-item">India</li>
-                    <li class="list-group-item">USA</li>
-                    <li class="list-group-item">UK</li>
-                    <li class="list-group-item">Australia<span class="badge">New</span></li>
-                    <li class="list-group-item">Canada</li>
-                </ul>
+                <p>To highlight text use <code>&lt;mark&gt;</code> tag </p>
+                <p>To underline text use <code>&lt;u&gt;</code> tag </p>
+                <p>For bold text use <code>&lt;strong&gt;</code> tag </p>
 
-                <div class="list-group">
-                    <a href="https://google.ro" class="list-group-item list-group-item-danger disabled">Google</a>
-                    <a href="https://dell.ro" class="list-group-item list-group-item-success active">Dell</a>
-                    <a href="https://microsoft.ro" class="list-group-item list-group-item-light">Microsoft</a>
-                </div>
+                <pre class="pre-scrollable">
+public class Program
+{
+    public static void Main()
+    {
+        Customer customer1 = new Customer()
+        {
+            ID = 101,
+            Name = "Mark",
+            Salary = 5000
+        };
+        Customer customer2 = new Customer()
+        {
+            ID = 102,
+            Name = "Pam",
+            Salary = 7000
+        };
+        Customer customer3 = new Customer()
+        {
+            ID = 104,
+            Name = "Rob",
+            Salary = 5500
+        };
+        Customer[] arrayCustomers = new Customer[2];
+        arrayCustomers[0] = customer1;
+        arrayCustomers[1] = customer2;
+       
+        List<customer> listCustomers = new List<customer>(2);
+        listCustomers.Add(customer1);
+        listCustomers.Add(customer2);
+        listCustomers.Add(customer3);
+        Customer cust = listCustomers[0];
+        Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                           cust.ID, cust.Name, cust.Salary);
+        Console.WriteLine("--------------------------------");
+       
+        for (int i = 0; i < listCustomers.Count; i++)
+        {
+            Customer customer = listCustomers[i];
+            Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                     customer.ID, customer.Name, customer.Salary);
+        }
+        Console.WriteLine("--------------------------------");
+       
+        foreach (Customer c in listCustomers)
+        {
+            Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+                                c.ID, c.Name, c.Salary);
+        }
+        Console.WriteLine("--------------------------------");
+       
+        listCustomers.Insert(1, customer3);
+        Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}",
+               listCustomers[1].ID, listCustomers[1].Name,
+               listCustomers[1].Salary);
+        Console.WriteLine("--------------------------------");
+       
+        Console.WriteLine("Index of Customer3 object in the List = "
+                           + listCustomers.IndexOf(customer3));
+        Console.WriteLine("--------------------------------");
+    }
+}
+                    </pre>
+                var <var>fullName</var> = <var>firstName</var> + <var>lastName  </var>
 
-                <div class="list-group">
-                    <a href="#" class="list-group-item">
-                        <h4 class="mb-1">List group item 1 primary</h4>
-                        <small class="text-muted">3 days ago</small>
-                    </a>
-
-                    <a href="#" class="list-group-item">
-                        <h4 class="mb-1">List group item 1 primary</h4>
-                        <small class="text-muted">3 days ago</small>
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small class="text-muted">3 days ago</small>
-                        </div>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                        <small class="text-muted">Donec id elit non mi porta.</small>
-                    </a>
-                </div>
+                <h4>Output</h4>
+                <samp>Hello word!</samp>
             </div>
         </div>
     </div>
