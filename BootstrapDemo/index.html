@@ -14,18 +14,13 @@
 <body>
    <div class="container">
        <div class="row">
-           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-               <div class="customDiv">All screens</div>
+           <div class="col-12 d-print-none">
+               <div class="customDiv">Visible on browser when not printing</div>
            </div>
-           <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-none d-sm-block">
-               <div class="customDiv">Small, Medium, large </div>
+           <div class="col-12">
+               <div class="customDiv d-none d-print-block">Visible for print</div>
            </div>
-           <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-none d-md-block">
-               <div class="customDiv">Medium and Large</div>
-           </div>
-           <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-none d-lg-block">
-               <div class="customDiv">Large</div>
-           </div>
+
        </div>
    </div>
     <!-- Optional JavaScript -->
